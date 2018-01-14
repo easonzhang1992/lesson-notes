@@ -1,0 +1,5 @@
+1、尽量缩小锁的范围，尽量不要在方法上加synchronized,可以先定义变量：final Object startupShutdownMonitor = new Object()，然后用该变量作为互斥锁，
+这样控制流程会更加灵活，哪个范围需要互斥，就把synchronized (this.startupShutdownMonitor)加到范围开始处即可，而且这样还可以互斥两个方法不能同时调用，
+比如spring中AbstractApplicationContext.refresh()和clos()就是采用的同一个锁，从而实现该目的
+
+2、
