@@ -1,5 +1,5 @@
 
-from:org.springframework.util.StringUtils.getFilename(String)
+1、from:org.springframework.util.StringUtils.getFilename(String)
 /**
 	 * Extract the filename from the given path,
 	 * e.g. "mypath/myfile.txt" -> "myfile.txt".
@@ -14,4 +14,8 @@ from:org.springframework.util.StringUtils.getFilename(String)
 		return (separatorIndex != -1 ? path.substring(separatorIndex + 1) : path);
 	}
   
+  2、匿名String数组写法：new String[] {"aaa"}
   
+
+
+
