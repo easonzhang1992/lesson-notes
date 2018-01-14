@@ -2,4 +2,7 @@
 这样控制流程会更加灵活，哪个范围需要互斥，就把synchronized (this.startupShutdownMonitor)加到范围开始处即可，而且这样还可以互斥两个方法不能同时调用，
 比如spring中AbstractApplicationContext.refresh()和clos()就是采用的同一个锁，从而实现该目的
 
-2、
+2、处理一些业务方法的时候比如doSomething,可以在前面加一个preSomething、后面加一个postSomething，这两个方法都是protected的空实现，如果有子类继承该类，
+则子类可以自定义处理前和处理后的流程，为拓展留下了口子
+
+3、
