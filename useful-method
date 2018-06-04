@@ -42,5 +42,8 @@
 	}
   
 
+加载并解析properties文件：
+ClassPathResource resource = new ClassPathResource("jdbc.properties");
+Properties defaultStrategies = PropertiesLoaderUtils.loadProperties(resource);
 
 
